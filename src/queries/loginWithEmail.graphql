@@ -1,0 +1,5 @@
+mutation loginWithEmailAndPassword {
+  loginWithEmail(email: "string", password: "string") {
+    token
+  }
+}
