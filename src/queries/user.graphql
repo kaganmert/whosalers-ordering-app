@@ -1,0 +1,40 @@
+query user {
+  user {
+    addresses {
+      addressIconId
+      addressLine1
+      addressLine2
+      adminWard
+      default
+      flatNumber
+      fullName
+      geoEnabled
+      id
+      lat
+      lon
+      postalCode
+      slugAdminWard
+      tips
+      title
+    }
+    createdAt
+    email
+    emailVerified
+    firebaseUserUid
+    firstName
+    lastName
+    mobileNumber
+    points
+    profilePicture {
+      alt
+      bundle
+      height
+      id
+      title
+      url
+      width
+    }
+    smsVerified
+    uid
+  }
+}
