@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import { api } from "../queries/loginWithEmail.generated";
+import { loginWithEmailApi } from "../queries/loginWithEmail.generated";
 
 import { Button } from "../components/elements/Button";
 
 const Login: React.FC = (): ReactElement => {
-  const [login, { isLoading }] = api.useLoginWithEmailAndPasswordMutation();
+  const [login, { isLoading }] =
+    loginWithEmailApi.useLoginWithEmailAndPasswordMutation();
   const { register, handleSubmit } = useForm();
   let navigate = useNavigate();
 

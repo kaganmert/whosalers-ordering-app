@@ -1,15 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
-import { api } from "../queries/loginWithEmail.generated";
+import { pastOrdersApi } from "../queries/pastOrders.generated";
+import { loginWithEmailApi } from "../queries/loginWithEmail.generated";
 
 export const store = configureStore({
-  reducer: { [api.reducerPath]: api.reducer },
+  reducer: {
+    [loginWithEmailApi.reducerPath]: loginWithEmailApi.reducer,
+    pastOrdersApi: pastOrdersApi.reducer,
+  },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(api.middleware),
+    getDefaultMiddleware().concat(loginWithEmailApi.middleware),
 });
 
 setupListeners(store.dispatch);
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;

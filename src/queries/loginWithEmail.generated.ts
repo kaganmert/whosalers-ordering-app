@@ -59,4 +59,4 @@ const injectedRtkApi = api.injectEndpoints({
   }),
 });
 
-export { injectedRtkApi as api };
+export { injectedRtkApi as loginWithEmailApi };
