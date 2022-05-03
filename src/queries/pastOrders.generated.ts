@@ -117,7 +117,7 @@ export type PastOrdersQuery = {
 
 export const PastOrdersDocument = `
     query pastOrders {
-      pastOrders(limit: 1, index: 1) {
+      pastOrders(limit: 50, index: 1) {
         address {
           addressLine1
           addressLine2

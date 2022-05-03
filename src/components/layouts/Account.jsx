@@ -2,7 +2,7 @@ import { userApi } from "../../queries/user.generated";
 import { LoadingScreen } from "../../styles/GlobalStyles";
 
 function Account() {
-  const { data, error, isFetching, isLoading } = userApi.useUserQuery();
+  const { data, error, isLoading } = userApi.useUserQuery();
   if (isLoading) {
     return <LoadingScreen />;
   }

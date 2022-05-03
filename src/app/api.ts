@@ -11,7 +11,6 @@ export const api = createApi({
     prepareHeaders: (headers, { getState }) => {
       const currentUser = getLoggedUser();
       if (currentUser && currentUser.token) {
-        console.log("girdi mi?");
         headers.set("Authorization", `Bearer ${currentUser.token}`);
       }
       return headers;

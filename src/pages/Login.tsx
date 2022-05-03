@@ -14,7 +14,6 @@ const Login: React.FC = (): ReactElement => {
   let navigate = useNavigate();
 
   const onSubmit = (formData) => {
-    console.log(formData);
     login(formData)
       .unwrap()
       .then(() => navigate("/dashboard"))

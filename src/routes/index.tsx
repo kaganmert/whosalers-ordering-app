@@ -17,6 +17,13 @@ const Dashboard = lazy(() => {
   ]).then(([moduleExports]) => moduleExports);
 });
 
+const Orders = lazy(() => {
+  return Promise.all([
+    import("../pages/Orders"),
+    new Promise((resolve) => setTimeout(resolve, 500)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
 const PageNotFound = lazy(() => {
   return Promise.all([
     import("../pages/PageNotFound"),
@@ -42,6 +49,14 @@ function Index() {
             element={
               <PublicRoute>
                 <Dashboard />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <PublicRoute>
+                <Orders />
               </PublicRoute>
             }
           />

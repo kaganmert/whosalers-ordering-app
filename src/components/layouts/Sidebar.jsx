@@ -117,7 +117,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                 </NavLink>
               </li>
               {/* LIST RESTAURANTS */}
-              <li
+              {/* <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
                   pathname.includes("/restaurants") && "bg-gray-800"
                 }`}
@@ -150,7 +150,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                     </span>
                   </div>
                 </NavLink>
-              </li>
+              </li> */}
               {/* USER INFO */}
               <li
                 className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${

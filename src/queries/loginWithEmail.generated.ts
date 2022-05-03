@@ -19,7 +19,6 @@ export type LoginWithEmailAndPasswordMutation = {
 };
 
 export const LoginWithEmailAndPasswordDocument = (variables) => {
-  console.log(variables);
   return `
     mutation loginWithEmailAndPassword {
   loginWithEmail(email: "${variables.email}", password: "${variables.password}") {
