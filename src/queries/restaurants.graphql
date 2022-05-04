@@ -1,0 +1,12 @@
+query restaurants {
+  restaurants(
+    index: 0
+    limit: 10
+    lat: 51.46179
+    lon: -0.143524
+    delivery: true
+  ) {
+    uid
+    name
+  }
+}
